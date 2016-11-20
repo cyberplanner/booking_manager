@@ -1,0 +1,3 @@
+describe Booking do
+  
+end
