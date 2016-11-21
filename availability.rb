@@ -12,7 +12,7 @@ input_time = ARGV[0]
 
 if input_time.nil?
   puts "------------"
-  puts Rainbow("ERROR:").underline.bright + Rainbow(" Appointment's time can not be left empty, please enter appointment's after ").red + Rainbow("'./availability.rb'").yellow + Rainbow("!").red
+  puts Rainbow("ERROR:").underline.bright + Rainbow(" Appointment's time can not be left empty, please enter the appointment's time after ").red + Rainbow("'./availability.rb'").yellow + Rainbow("!").red
   puts "------------"
 else
   formated_time = input_time + ":00"
