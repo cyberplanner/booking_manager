@@ -56,3 +56,7 @@ $ rspec
 ![alt text](http://i67.tinypic.com/rm8w1j.jpg "Error 1")
 * If the user did not provide time as argument the app prints an error message instructing the user to provide the time.
 ![alt text](http://i65.tinypic.com/1zee9o9.jpg "Error 2")
+
+----
+#### Thanks for checking my code, feedbacks are welcomed and appreciated.
+----
