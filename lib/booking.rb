@@ -10,8 +10,8 @@ class Booking
   end
 
   def book_appointment(time)
-    raise "Sorry, you can't book an appointment before work hours" if time < OPENING_TIME
-    raise "Sorry, you can't book an appointment after work hours" if time > CLOSING_TIME
+    raise "Sorry, you can not book an appointment before 8:00AM" if time < OPENING_TIME
+    raise "Sorry, you can not book an appointment after 3:00PM" if time > CLOSING_TIME
     @booked_appointment = @available_slots.find { |slot| slot["time"] >= time }
     raise "Sorry, there's no more avaiable appointments today" if @booked_appointment.nil?
     @booked_slots << @available_slots.delete(@booked_appointment)
