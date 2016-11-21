@@ -58,11 +58,11 @@ describe Booking do
 
     context "When time slot is invalid" do
       it "does not allow appointments before opening time" do
-        expect{ booking.book_appointment("07:00:00") }.to raise_error ("Sorry, you can't book an appointment before 8:00AM")
+        expect{ booking.book_appointment("07:00:00") }.to raise_error("Sorry, you can not book an appointment before 8:00AM")
       end
 
       it "does not allow appointments after closing time" do
-        expect{ booking.book_appointment("16:00:00") }.to raise_error ("Sorry, you can't book an appointment after 3:00PM")
+        expect{ booking.book_appointment("16:00:00") }.to raise_error("Sorry, you can not book an appointment after 3:00PM")
       end
     end
   end
