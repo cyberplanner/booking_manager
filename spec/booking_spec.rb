@@ -9,10 +9,6 @@ describe Booking do
   let(:booking_slots) { slots_hash["availability_slots"] }
   let(:booking) { described_class.new(booking_slots) }
 
-  # before(:each) do
-    # booking = Booking.new(booking_slots)
-  # end
-
   describe "Initialized with available time slots" do
     it "Stores available slots" do
       expect(booking.available_slots).to include({
@@ -41,6 +37,12 @@ describe Booking do
       it "could book a time slot twice if the second doctor is available" do
         booking.book_appointment("08:00:00")
         expect(booking.book_appointment("08:00:00")).to eq "08:00:00"
+      end
+    end
+
+    context "When time slot is not available" do
+      it "books the next available time slot" do
+        expect(booking.book_appointment("08:10:00")).to eq "08:20:00"
       end
     end
   end
