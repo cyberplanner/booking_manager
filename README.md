@@ -58,5 +58,5 @@ $ rspec
 ![alt text](http://i65.tinypic.com/1zee9o9.jpg "Error 2")
 
 ----
-#### Thanks for checking my code, feedback is welcomed and appreciated.
+#### Thanks for checking out my code, feedback is welcomed and appreciated.
 ----
