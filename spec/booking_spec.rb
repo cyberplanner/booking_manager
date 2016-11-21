@@ -52,8 +52,17 @@ describe Booking do
 
       it "raises an error when there is no more available slots" do
         booking.book_appointment("15:00:00")
-        # binding.pry
         expect{ booking.book_appointment("15:00:00") }.to raise_error("Sorry, there's no more avaiable appointments today")
+      end
+    end
+
+    context "When time slot is invalid" do
+      it "does not allow appointments before opening time" do
+        expect{ booking.book_appointment("07:00:00") }.to raise_error ("Sorry, you can't book an appointment before 8:00AM")
+      end
+
+      it "does not allow appointments after closing time" do
+        expect{ booking.book_appointment("16:00:00") }.to raise_error ("Sorry, you can't book an appointment after 3:00PM")
       end
     end
   end
