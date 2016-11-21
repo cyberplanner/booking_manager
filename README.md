@@ -36,7 +36,7 @@ $ chmod u+x availability.rb
 ```
 
 ## Testing :
-* You can run the test suite from the root directory@
+* You can run the test suite from the root directory:
 ```
 $ rspec
 ```
