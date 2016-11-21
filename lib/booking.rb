@@ -9,6 +9,7 @@ class Booking
 
   def book_appointment(time)
     @booked_appointment = @available_slots.find { |slot| slot["time"] >= time }
+    @available_slots.delete(@booked_appointment)
     @booked_appointment["time"]
   end
 
