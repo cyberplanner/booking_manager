@@ -1,6 +1,6 @@
 require 'booking'
 require 'json'
-
+require 'pry'
 
 
 describe Booking do
@@ -23,6 +23,11 @@ describe Booking do
     context "When time slot is avaiable" do
       it 'returns the time for the next available appointment' do
         expect(booking.book_appointment("08:10:00")).to eq "08:10:00"
+        expect(booking.booked_slots[0]).to eq ({
+        "time"=>"08:10:00",
+        "slot_size"=>10,
+        "doctor_id"=>1
+        })
       end
 
       it "removes the booked appointments from the available slots" do
@@ -43,6 +48,12 @@ describe Booking do
     context "When time slot is not available" do
       it "books the next available time slot" do
         expect(booking.book_appointment("08:10:00")).to eq "08:20:00"
+      end
+
+      it "raises an error when there is no more available slots" do
+        booking.book_appointment("15:00:00")
+        # binding.pry
+        expect{ booking.book_appointment("15:00:00") }.to raise_error("Sorry, there's no more avaiable appointments today")
       end
     end
   end
