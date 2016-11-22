@@ -4,7 +4,7 @@ require 'pry'
 
 
 describe Booking do
-  file = File.read('availability_slots.json')
+  file = File.read('lib/availability_slots.json')
   slots_hash = JSON.parse(file)
   let(:booking_slots) { slots_hash["availability_slots"] }
   let(:booking) { described_class.new(booking_slots) }

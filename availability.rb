@@ -3,7 +3,7 @@ require './lib/booking'
 require 'json'
 require 'rainbow'
 
-file = File.read('availability_slots.json')
+file = File.read('lib/availability_slots.json')
 slots_hash = JSON.parse(file)
 available_slots = slots_hash["availability_slots"]
 
