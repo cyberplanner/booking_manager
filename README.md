@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.com/cyberplanner/booking_manager.svg?token=2GwpjbQN1QM2GpxTtmcG&branch=master)](https://travis-ci.com/cyberplanner/booking_manager)
 
 # Booking Manager
-
-#### Babylon Ruby Tech Test
 ----
 A simple command line program made with Ruby that allows booking appointment with one of two doctors using a dataset sourced from the provided json file.
 
